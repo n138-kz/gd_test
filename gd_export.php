@@ -15,3 +15,5 @@ imagewebp($im);
 // メモリを開放します
 imagedestroy($im);
 
+header('x-powered-by: null');
+
