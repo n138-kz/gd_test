@@ -1,7 +1,13 @@
 <?php
 session_start();
 date_default_timezone_set('Asia/Tokyo');
-header('content-type: text/plain');
+
+if ( isset( $_REQUEST['src'] ) ) {
+	header('content-type: text/plain');
+	echo file_get_contents( __FILE__ );
+	exit();
+}
+
 header('content-type: image/webp');
 
 // 空の画像を作成し、テキストを追加します
